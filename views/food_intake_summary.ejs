@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <% if (food) { %>
+            <h1>Food Details</h1>
+            <p><strong>Name:</strong> <%= food.food_name %></p>
+            <p><strong>Calories:</strong> <%= food.nf_calories %> kcal</p>
+            <p><strong>Serving Size:</strong> <%= food.serving_qty %> <%= food.serving_unit %></p>
+            <p><strong>Cholestrol:</strong> <%= food.nf_cholesterol %> </p>
+            <p><strong>Fat:</strong> <%= food.nf_total_fat %> </p>
+            <p><strong>Total Carbohydrate:</strong> <%= food.nf_total_carbohydrate %> </p>
+            <p><strong>Dietary fiber:</strong> <%= food.nf_dietary_fiber %> </p>
+            <p><strong>Sugars:</strong> <%= food.nf_sugars %> </p>
+            <p><strong>Protein:</strong> <%= food.nf_protein %> </p>
+            <p><strong>Sodium:</strong> <%= food.nf_sodium %> </p>
+            <a href="/result/<%= userr._id %>/intake">Search Another Food</a>
+        <% } else { %>
+            <h1>Error</h1>
+            <p><%= error %></p>
+            <a href="/result/<%= userr._id %>/intake">Go Back</a>
+        <% } %>
+    </div>
+</body>
+</html>

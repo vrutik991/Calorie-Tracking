@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>BMI Results</h1>
+    <p>Hello, <%= name %>! Your BMI is: <strong><%= bmi %></strong></p>
+    <p>According to your BMI, you are classified as: <strong><%= category %></strong></p>
+    <p><%= intro %></p>
+    <p>Here is some advice:</p>
+    <ul>
+        <li><strong>What to eat:</strong> <%= recommendation %></li>
+        <li><strong>What to avoid:</strong> <%= avoid %></li>
+    </ul>
+    <form action="/result/<%=userr.id%>/goal">
+        <button>Set Goal</button>
+    </form>
+    <form action="/diet_recommendation" method="GET">
+        <input type="hidden" name="bmi" value="<%= bmi %>">
+        <input type="hidden" name="name" value="<%= name %>">
+        <button type="submit">Get Diet Recommendations</button>
+    </form>
+    <form action="/result/<%=userr.id%>/intake">
+        <button>Check Intake</button>
+    </form>
+    <form action="/result/<%=userr.id%>/burnt/auth">
+        <button>Retrieve burnt calories data</button>
+    </form><br><br>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Summary</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Your Daily Calorie Summary</h1>
+
+    <p><strong>Breakfast:</strong> <%= meals.breakfast %> calories</p>
+    <p><strong>Lunch:</strong> <%= meals.lunch %> calories</p>
+    <p><strong>Snacks:</strong> <%= meals.snacks %> calories</p>
+    <p><strong>Dinner:</strong> <%= meals.dinner %> calories</p>
+
+    <h2>Total Calorie Intake: <%= meals.total %> calories</h2>
+    <% if(meals.total > meals.intakeneeded) { %>
+    <p>Warning ! Calories Exceeded</p>
+    <%}else
+    {%>
+    <p>Calories Controlled</p>
+    <%}%>
+    <a href="/intake">Log Another Day</a>
+</body>
+</html>

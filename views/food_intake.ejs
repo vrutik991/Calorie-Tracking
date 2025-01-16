@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Tracker</h1>
+        <form action="/result/<%= userr._id %>/intake/search" method="POST">
+            <input type="text" name="foodName" placeholder="Enter your food..." required>
+            <button type="submit">Add</button>
+
+        <h1>Your todays calories are : <%= userr.total_food_calorie %></h1>
+
+
+        <% if(userr.total_food_calorie>=userr.intake_needed) {%>
+          <h2 style="color: red;">Calories limit exceeded!!!!<h2>
+        <% } %>
+
+        
+            <!-- <input type="text" name="foodName" placeholder="Enter your Lunch..." required>
+            <button type="submit">Add</button>
+            <input type="text" name="foodName" placeholder="Enter your Dinner..." required>
+            <button type="submit">Add</button> -->
+        </form>
+        <a href="/result/<%= userr._id %>">result</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Recommendation</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Diet Recommendation</h1>
+    <p>Hello, <%= name %>.</p>
+    <p></p>
+
+    <form method="POST">
+        <div class="rounded-square">
+            <label for="diet">Diet Type?</label>
+            <select name="diet" id="diet">
+                <option value="weight_loss" <%= bmi >= 25 ? 'selected' : '' %>>Weight Loss</option>
+                <option value="weight_gain" <%= bmi < 18.5 ? 'selected' : '' %>>Weight Gain</option>
+                <option value="balanced" <%= bmi >= 18.5 && bmi < 25 ? 'selected' : '' %>>Balanced</option>
+            </select>
+        </div>
+
+        <div class="rounded-square">
+            <label for="diet_preference">Diet Preference?</label>
+            <select name="diet_preference" id="diet_preference">
+                <option value="veg">Veg</option>
+                <option value="non_veg">Non-Veg</option>
+                <option value="gluten_free">Gluten-Free</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        </div>
+
+        <div class="rounded-square">
+            <label for="activity_level">Activity Level?</label>
+            <select name="activity_level" id="activity_level">
+                <option value="sedentary">Sedentary</option>
+                <option value="moderately_active">Moderately Active</option>
+                <option value="lightly_active">Lightly Active</option>
+                <option value="very_active">Very Active</option>
+            </select>
+        </div>
+
+        <div class="rounded-square">
+            <label for="food_allergy">Food Allergy?</label>
+            <select name="food_allergy" id="food_allergy">
+                <option value="none">None</option>
+                <option value="gluten">Gluten</option>
+                <option value="nuts">Nuts</option>
+                <option value="dairy">Dairy</option>
+                <option value="seafood">Seafood</option>
+            </select>
+        </div>
+
+        <div class="rounded-square">
+            <label for="medical_history">Past Medical History?</label>
+            <select name="medical_history" id="medical_history">
+                <option value="none">None</option>
+                <option value="diabetes">Diabetes</option>
+                <option value="hypertension">Hypertension</option>
+                <option value="heart_disease">Heart Disease</option>
+                <option value="asthma">Asthma</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

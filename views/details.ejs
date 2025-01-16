@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Burn Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Track Your Daily Calories Burned</h1>
+    <h2>This Data will in future come from the smart watch directly</h2>
+    <form action="/calculate" method="POST">
+        <label for="steps">Steps Taken Today: <%= User.steps %></label> <br><br>
+        <label for="calories">Calories Burned Today: <%= User.kcal %></label><br><br>
+        <!-- <input type="number" id="steps" name="steps" required><br><br> -->
+
+        <button type="submit">Calculate Calories Burned</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <h1>Home Page</h1>
+    <h2>Enter Your details</h2>
+    <form action="home/<%=User._id%>/index">
+        <div class="row mt-3"></div>
+            <div class="col-8 offset-2">
+                <form action="/<%=User._id%>" method="POST">
+                    <div>
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required><br><br>
+                    </div>
+                    <div>
+                        <label for="age" class="form-label">Age:</label>
+                        <input type="number" id="age" name="age" class="form-control" required><br><br>
+                    </div>
+                    <div>
+                        <label for="height" class="form-label">Height (in cm):</label>
+                        <input type="number" id="height" name="height" class="form-control" required><br><br>
+                    </div>
+                    <div>
+                        <label for="weight" class="form-label">Weight (in kg):</label>
+                        <input type="number" id="weight" name="weight" class="form-control" required><br><br>
+                    </div>
+                    <button type="submit">Underweight or Overweight?</button>
+                </form>
+                 <br><br>
+                <form action="/burnt">
+                    <button>See how much calories you burnt</button>
+                </form><br><br>
+                <form action="/needed">
+                    <button>See the calories you need</button>
+                </form><br><br>
+                <form action="/intake">
+                    <button>Check Intake</button>
+                </form>
+            </div>
+        </div>
+    </form>
+    
+</body>

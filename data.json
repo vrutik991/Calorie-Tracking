@@ -1,0 +1,44 @@
+{
+  "bucket": [
+    {
+      "startTimeMillis": "1736533800000",
+      "endTimeMillis": "1736619691993",
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated",
+          "point": [
+            {
+              "startTimeNanos": "1736533816418174379",
+              "endTimeNanos": "1736618155872375055",
+              "dataTypeName": "com.google.step_count.delta",
+              "originDataSourceId": "raw:com.google.step_count.cumulative:samsung:SM-S901E:b14950ea:step_counter  Non-wakeup",
+              "value": [
+                {
+                  "intVal": 6227,
+                  "mapVal": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataSourceId": "derived:com.google.calories.expended:com.google.android.gms:aggregated",
+          "point": [
+            {
+              "startTimeNanos": "1736533800000000000",
+              "endTimeNanos": "1736618155872375055",
+              "dataTypeName": "com.google.calories.expended",
+              "originDataSourceId": "derived:com.google.calories.expended:com.google.android.gms:merge_calories_expended",
+              "value": [
+                {
+                  "fpVal": 1820.9982206296802,
+                  "mapVal": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

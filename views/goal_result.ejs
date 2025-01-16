@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Weight Loss Plan</title>
+</head>
+<body>
+    <h1>Your Weight Loss Plan</h1>
+    <p>Current Weight: <strong><%= currentWeight %> kg</strong></p>
+    <p>Target Weight: <strong><%= targetWeight %> kg</strong></p>
+    <p>Duration: <strong><%= durationInDays %> days</strong></p>
+    <h1>Calorie deficit : <strong><%= dailyCalorieDeficit %></strong> calories</h1>
+    <p>To reach your goal, you need to maintain a daily calorie deficit of <strong><%= dailyCalorieDeficit %> calories(Your intake should be  <%= dailyCalorieDeficit %> calories less than what you burn)</strong>.</p>
+    <h1>Calorie Limit : <strong><%= targetDailyCalories %> calories</strong></h1>
+    <p>Your target daily calorie intake should be <strong><%= targetDailyCalories %> calories</strong> to achieve your weight loss goal in the given time frame.</p>
+    <h1>Your have to burn : <%= daily_calorie_burn %> calories daily</h1>
+    <a href="/goal">Change Duration</a><br><br>
+    <a href="/">Home</a>
+</body>
+</html>

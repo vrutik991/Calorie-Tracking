@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Calculate Your Daily Calorie Needs</h1>
+    <form action="/calculate_needed" method="POST">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+
+        <label for="height">Height (in cm):</label>
+        <input type="number" id="height" name="height" required><br><br>
+
+        <label for="activity">Activity Level:</label>
+        <select id="activity" name="activity" required>
+            <option value="sedentary">Sedentary</option>
+            <option value="light">Light Activity</option>
+            <option value="moderate">Moderate Activity</option>
+            <option value="active">Active</option>
+            <option value="very_active">Very Active</option>
+        </select><br><br>
+        <p>Lightly active: If you exercise lightly one to three days a week</p>
+        <p>Moderately active: If you exercise moderately three to five days a week</p>
+        <p> Very active: If you engage in hard exercise six to seven days a week</p>
+
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
